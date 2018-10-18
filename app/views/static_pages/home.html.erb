@@ -1,4 +1,18 @@
-<h1>Home Page</h1>
-
-<p>testing the home page ... </p>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+ <title><%= yield(:title) %> | Bloggster</title>  </head>
+  <body>
+    <h1>Home Page</h1>
+    <p>
+      This is my home page. Welcome.
+    </p>
+    <%= image_tag("image.jpeg", :alt => "my image") %>
+    <% for i in 1..5 do %>
+    <p>
+      <%= i %>
+    </p>
+    <% end %>
+  </body>
+</html>
